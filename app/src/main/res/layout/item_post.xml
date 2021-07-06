@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="40dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:layout_alignParentTop="true"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:src="@drawable/dummy"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/ivProfile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="rahul" />
+
+    <Button
+        android:id="@+id/btnOptions"
+        android:layout_width="5dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ufi_more"
+        />
+
+
+    <TextView
+        android:id="@+id/tvCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="2 d"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/tvDescription"
+        />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/tvUsername"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btnHeart"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/ufi_heart" />
+
+    <Button
+        android:id="@+id/btnComment"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/ufi_comment"
+        android:layout_below="@+id/ivImage"
+        android:layout_toRightOf="@+id/btnHeart"/>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ufi_new_direct"
+        android:layout_below="@+id/ivImage"
+        android:layout_toRightOf="@+id/btnComment"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/btn_save"
+        android:layout_below="@+id/ivImage"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tvLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnHeart"
+        android:text="2000 likes"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:textSize="11dp"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:id="@+id/tvUsernameBelow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLikes"
+        android:text="rahul"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/tvUsernameBelow"
+        android:layout_below="@+id/tvLikes"
+        tools:text="trying to look hipster" />
+</RelativeLayout>

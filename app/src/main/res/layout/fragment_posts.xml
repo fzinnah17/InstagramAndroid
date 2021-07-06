@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PostsFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivStories_1"
+        android:src="@drawable/face"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/design_default_color_primary_variant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/ivStories_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivStories_1"
+        android:layout_marginLeft="12dp"
+        android:text="nafis_rk"
+        android:layout_marginBottom="10dp"
+        android:textSize="13dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivStories_2"
+        android:src="@drawable/potato"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/design_default_color_primary_variant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/ivStories_1"
+        />
+
+    <TextView
+        android:id="@+id/ivStories_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivStories_1_text"
+        android:text="mr_potato"
+        android:layout_below="@+id/ivStories_2"
+        android:layout_marginLeft="14dp"
+        android:textSize="13dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivStories_3"
+        android:src="@drawable/robert"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/design_default_color_primary_variant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/ivStories_2"
+        />
+
+    <TextView
+        android:id="@+id/ivStories_3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivStories_2_text"
+        android:text="robert_dr"
+        android:layout_below="@+id/ivStories_3"
+        android:layout_marginLeft="17dp"
+        android:textSize="13dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivStories_4"
+        android:src="@drawable/bugs"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/design_default_color_primary_variant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/ivStories_3"
+        />
+
+    <TextView
+        android:id="@+id/ivStories_4_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivStories_3_text"
+        android:text="bugs_bunny"
+        android:layout_below="@+id/ivStories_4"
+        android:layout_marginLeft="8dp"
+        android:textSize="13dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivStories_5"
+        android:src="@drawable/logic"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/design_default_color_primary_variant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/ivStories_4"
+        />
+
+    <TextView
+        android:id="@+id/ivStories_5_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivStories_4_text"
+        android:text="logic"
+        android:layout_below="@+id/ivStories_5"
+        android:layout_marginLeft="14dp"
+        android:textSize="13dp"
+        />
+
+
+    <View
+        android:id="@+id/storiesDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        android:layout_below="@+id/ivStories_1_text"
+        />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storiesDivider"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

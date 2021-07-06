@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/editUser"
+        android:icon="@drawable/ufi_new_direct"
+        app:showAsAction="ifRoom"
+        android:title="Edit">
+    </item>
+</menu>
