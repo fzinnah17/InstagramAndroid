@@ -54,7 +54,8 @@ public class PostsFragment extends Fragment {
 
     public static final String TAG = "PostsFragment";
 
-    public PostsFragment() { }
+    public PostsFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -121,8 +122,6 @@ public class PostsFragment extends Fragment {
                 startActivity(intent);
             }
         };
-
-
 
 
         // initialize the array that will hold posts and create a PostsAdapter
@@ -206,7 +205,7 @@ public class PostsFragment extends Fragment {
                 }
                 // for debugging purposes let's print every post description to logcat
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getTime() );
+                    Log.i(TAG, "Post: " + post.getTime() + " " + post.getCreatedAt());
                 }
 
                 // save received posts to list and notify adapter of new data

@@ -63,11 +63,11 @@ public class DetailActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-       if( getIntent().getExtras().getBoolean("autoFocus") ) {
-           etComment.requestFocus();
-           InputMethodManager imm = (InputMethodManager) getSystemService(DetailActivity.this.INPUT_METHOD_SERVICE);
-           imm.showSoftInput(etComment, InputMethodManager.SHOW_IMPLICIT);
-       }
+        if (getIntent().getExtras().getBoolean("autoFocus")) {
+            etComment.requestFocus();
+            InputMethodManager imm = (InputMethodManager) getSystemService(DetailActivity.this.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(etComment, InputMethodManager.SHOW_IMPLICIT);
+        }
 
     }
 
@@ -99,7 +99,7 @@ public class DetailActivity extends AppCompatActivity {
 
         description = post.getDescription();
         image = post.getImage().getUrl();
-        timeStamp =post.getTime();
+        timeStamp = post.getTime();
 
 
         tvDescription.setText(description);
@@ -114,7 +114,7 @@ public class DetailActivity extends AppCompatActivity {
                 tvUsername.setText(username);
                 tvUsernameBelow.setText(username);
                 ParseFile imagePofile = user.getParseFile(User.KEY_PROFILE_IMAGE);
-                if(imagePofile != null) {
+                if (imagePofile != null) {
                     Glide.with(DetailActivity.this).load(imagePofile.getUrl()).into(ivProfile);
                     Glide.with(DetailActivity.this).load(imagePofile.getUrl()).into(ivProfileBelow);
                 }
@@ -130,7 +130,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        queryComments();
+        //mments();
 
     }
 
@@ -173,14 +173,14 @@ public class DetailActivity extends AppCompatActivity {
                     return;
                 }
                 for (Comment comment : objects) {
-                    Log.i(TAG, "Comment: " + comment.getTime() );
+                    Log.i(TAG, "Comment: " + comment.getTime());
                 }
                 AllComments.clear();
                 AllComments.addAll(objects);
                 adapter.notifyDataSetChanged();
 
             }
-        });
+        });  // 6B
 
 
     }
@@ -192,8 +192,8 @@ public class DetailActivity extends AppCompatActivity {
             if (e == null) {
                 // The query was successful, returns the users that matches
                 // the criteria.
-                for(ParseUser user1 : users) {
-                    Log.d("User List ",(user1.getUsername()));
+                for (ParseUser user1 : users) {
+                    Log.d("User List ", (user1.getUsername()));
                 }
             } else {
                 // Something went wrong.

@@ -134,7 +134,7 @@ public class UserDetailActivity extends AppCompatActivity {
                 }
                 // for debugging purposes let's print every post description to logcat
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getTime() );
+                    Log.i(TAG, "Post: " + post.getTime());
                 }
 
                 // save received posts to list and notify adapter of new data
@@ -195,7 +195,7 @@ public class UserDetailActivity extends AppCompatActivity {
                 }
                 // for debugging purposes let's print every post description to logcat
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getTime() );
+                    Log.i(TAG, "Post: " + post.getTime());
                 }
 
                 // save received posts to list and notify adapter of new data

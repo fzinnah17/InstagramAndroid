@@ -28,12 +28,12 @@
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/ivProfile"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
         tools:text="rahul" />
 
     <Button

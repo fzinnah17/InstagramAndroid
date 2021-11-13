@@ -21,9 +21,11 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramFBU">
-        <activity android:name=".Activity.UserDetailActivity"></activity>
+        <activity android:name=".Activity.UserDetailActivity" />
         <activity android:name=".Activity.DetailActivity" />
         <activity android:name=".Activity.FeedActivity" />
+
+
         <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,9 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Activity.MainActivity" />
 
         <provider
+
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.codepath.fileprovider"
             android:exported="false"

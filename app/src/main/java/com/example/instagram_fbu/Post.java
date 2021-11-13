@@ -22,7 +22,8 @@ import java.util.Locale;
 @ParseClassName("Post")
 public class Post extends ParseObject {
 
-    public Post() {}
+    public Post() {
+    }
 
     public static final String TAG = "PostModel";
 
@@ -34,12 +35,24 @@ public class Post extends ParseObject {
     public static final String KEY_LIKES = "like";
 
     // Getters
-    public String getDescription() { return getString(KEY_DESCRIPTION); }
-    public ParseFile getImage() { return getParseFile(KEY_IMAGE); }
-    public ParseUser getUser() { return getParseUser(KEY_USER); }
-    public JSONArray getLikes() { return getJSONArray(KEY_LIKES); }
+    public String getDescription() {
+        return getString(KEY_DESCRIPTION);
+    }
+
+    public ParseFile getImage() {
+        return getParseFile(KEY_IMAGE);
+    }
+
+    public ParseUser getUser() {
+        return getParseUser(KEY_USER);
+    }
+
+    public JSONArray getLikes() {
+        return getJSONArray(KEY_LIKES);
+    }
+
     public int getNumLikes() {
-        if(getLikes() != null) {
+        if (getLikes() != null) {
             JSONArray usersLiked = getLikes();
             return usersLiked.length();
         } else {
@@ -50,19 +63,27 @@ public class Post extends ParseObject {
 
 
     // Setters
-    public void setDescription(String description) { put(KEY_DESCRIPTION, description); }
-    public void setImage(ParseFile parseFile) { put(KEY_IMAGE, parseFile); }
-    public void setUser(ParseUser user) {  put(KEY_USER, user); }
+    public void setDescription(String description) {
+        put(KEY_DESCRIPTION, description);
+    }
+
+    public void setImage(ParseFile parseFile) {
+        put(KEY_IMAGE, parseFile);
+    }
+
+    public void setUser(ParseUser user) {
+        put(KEY_USER, user);
+    }
 
     public boolean isLikedBy(ParseUser user) {
-        if(getLikes() != null) {
+        if (getLikes() != null) {
             JSONArray usersLiked = getLikes();
 
             for (int i = 0; i < usersLiked.length(); i++) {
                 JSONObject userPointer = null;
                 try {
                     userPointer = usersLiked.getJSONObject(i);
-                    if(userPointer.getString("objectId").equals(user.getObjectId())) {
+                    if (userPointer.getString("objectId").equals(user.getObjectId())) {
                         return true;
                     }
                 } catch (JSONException e) {
@@ -73,8 +94,6 @@ public class Post extends ParseObject {
 
         return false;
     }
-
-
 
 
     public String getTime() {
@@ -117,7 +136,7 @@ public class Post extends ParseObject {
     public void unLike(ParseUser currentUser) throws JSONException {
         JSONArray usersLiked = getLikes();
 
-        if(usersLiked == null) {
+        if (usersLiked == null) {
             usersLiked = new JSONArray();
         }
 

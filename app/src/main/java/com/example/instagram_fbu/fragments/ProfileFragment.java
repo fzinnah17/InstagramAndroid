@@ -71,6 +71,7 @@ public class ProfileFragment extends Fragment {
 
     RecyclerView rvProfile;
     ProfileAdapter adapter;
+    GridLayoutManager gridLayoutManager;
 
     private File photoFile;
     private String photoFileName = "photo.jpg";
@@ -130,7 +131,7 @@ public class ProfileFragment extends Fragment {
             }
         };
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
+        gridLayoutManager = new GridLayoutManager(getContext(), 3);
 
         adapter = new ProfileAdapter(getContext(), allPosts, clickListener);
         rvProfile.setAdapter(adapter);
