@@ -1,8 +1,6 @@
-# Project 4 - *Instagram*
+# Instagram
 
 **Instagram** is a photo sharing app using Parse as its backend.
-
-Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -38,8 +36,6 @@ The following **extra** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [Kap](https://getkap.co/).
 
 ## Credits
 
